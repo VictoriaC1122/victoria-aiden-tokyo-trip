@@ -1333,135 +1333,171 @@
             .language-selector {
                 top: 16px;
                 right: 12px;
+                z-index: 1000;
             }
 
             .lang-buttons {
-                gap: 2px;
-                padding: 4px;
+                gap: 4px;
+                padding: 6px;
                 border-radius: 12px;
+                background: rgba(255, 255, 255, 0.95);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             }
 
             .lang-btn {
-                padding: 6px 10px;
+                padding: 7px 12px;
                 font-size: 12px;
                 border-radius: 8px;
+                transition: all 0.2s ease;
+            }
+
+            .lang-btn.active {
+                background: var(--primary-brown);
+                color: white;
             }
 
             .hero {
-                padding: 32px 16px 50px;
-                min-height: 300px;
+                padding: 40px 16px 60px;
+                min-height: 320px;
+                background: linear-gradient(135deg, #FEFDFB 0%, #F5F0EB 100%);
             }
 
             .hero h1 {
-                font-size: 32px;
-                letter-spacing: 1px;
-                margin-bottom: 8px;
+                font-size: 36px;
+                letter-spacing: 2px;
+                margin-bottom: 12px;
+                font-weight: 700;
+                color: var(--primary-brown);
             }
 
             .hero-subtitle {
-                font-size: 14px;
-                margin-bottom: 12px;
+                font-size: 16px;
+                margin-bottom: 14px;
+                font-weight: 600;
+                color: var(--text-dark);
             }
 
             .hero-dates {
-                font-size: 12px;
-                margin-bottom: 12px;
+                font-size: 13px;
+                margin-bottom: 14px;
+                color: var(--text-mid);
             }
 
             .destinations {
-                font-size: 12px;
-                line-height: 1.5;
+                font-size: 13px;
+                line-height: 1.8;
+                color: var(--text-dark);
             }
 
             .nav-item {
-                padding: 12px 10px;
-                font-size: 12px;
-                min-width: 55px;
+                padding: 14px 12px;
+                font-size: 13px;
+                min-width: 60px;
                 flex: 0 1 auto;
+                transition: all 0.2s ease;
             }
 
             .nav-item::after {
-                height: 2px;
+                height: 3px;
             }
 
             .container {
-                padding: 0 12px;
+                padding: 0 16px;
             }
 
             .page-section {
-                padding: 40px 0;
+                padding: 50px 0;
             }
 
             .section-title {
-                font-size: 22px;
-                margin-bottom: 24px;
-                padding-bottom: 12px;
-                letter-spacing: 0.5px;
+                font-size: 24px;
+                margin-bottom: 28px;
+                padding-bottom: 14px;
+                letter-spacing: 1px;
+                color: var(--primary-brown);
+                font-weight: 700;
             }
 
             .overview-container {
-                padding: 18px 12px;
-                border-radius: 10px;
+                padding: 20px 14px;
+                border-radius: 12px;
+                background: #F9F8F6;
             }
 
             .overview-description {
                 font-size: 14px;
-                margin-bottom: 18px;
-                line-height: 1.8;
+                margin-bottom: 20px;
+                line-height: 1.9;
+                color: var(--text-dark);
             }
 
             .feature-grid {
                 grid-template-columns: 1fr;
-                gap: 10px;
+                gap: 12px;
             }
 
             .feature-card {
-                padding: 18px 14px;
-                border-radius: 10px;
+                padding: 20px 16px;
+                border-radius: 12px;
+                background: white;
+                border: 1px solid #E8E0D5;
+                box-shadow: 0 2px 8px rgba(139, 111, 71, 0.08);
+            }
+
+            .feature-card:hover {
+                box-shadow: 0 4px 12px rgba(139, 111, 71, 0.12);
             }
 
             .feature-card-icon {
-                font-size: 32px;
-                margin-bottom: 8px;
+                font-size: 36px;
+                margin-bottom: 10px;
             }
 
             .feature-card-title {
-                font-size: 14px;
-                margin-bottom: 6px;
+                font-size: 15px;
+                margin-bottom: 8px;
                 font-weight: 700;
+                color: var(--primary-brown);
             }
 
             .feature-card-text {
                 font-size: 13px;
-                line-height: 1.6;
+                line-height: 1.7;
+                color: var(--text-dark);
             }
 
             .itinerary-grid {
-                gap: 12px;
-                margin-top: 30px;
+                gap: 14px;
+                margin-top: 32px;
             }
 
             .day-card {
-                border-radius: 10px;
-                margin-bottom: 12px;
-                box-shadow: 0 2px 8px rgba(139, 111, 71, 0.1);
+                border-radius: 12px;
+                margin-bottom: 14px;
+                box-shadow: 0 2px 10px rgba(139, 111, 71, 0.12);
+                overflow: hidden;
+                background: white;
             }
 
             .day-card:hover {
-                transform: none;
-                box-shadow: 0 4px 16px rgba(139, 111, 71, 0.15);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 16px rgba(139, 111, 71, 0.18);
             }
 
             .day-card.expanded {
-                box-shadow: 0 6px 20px rgba(139, 111, 71, 0.2);
+                box-shadow: 0 8px 24px rgba(139, 111, 71, 0.2);
             }
 
             .day-header {
-                padding: 16px 12px;
-                font-size: 15px;
+                padding: 18px 14px;
+                font-size: 16px;
                 font-weight: 700;
-                border-radius: 10px 10px 0 0;
+                border-radius: 12px 12px 0 0;
                 background: linear-gradient(135deg, #F5F0EB 0%, #E8E0D5 100%);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
             }
 
             .day-header-content {
@@ -1475,23 +1511,27 @@
             }
 
             .toggle-icon {
-                font-size: 16px;
-                width: 24px;
-                height: 24px;
-                margin-left: 10px;
+                font-size: 18px;
+                width: 28px;
+                height: 28px;
+                margin-left: 12px;
+                transition: transform 0.3s ease;
             }
 
             .day-content {
-                padding: 16px 14px;
+                padding: 18px 14px;
                 font-size: 13px;
+                background: white;
             }
 
             .day-content h4 {
-                font-size: 14px;
-                margin-top: 16px;
+                font-size: 15px;
+                margin-top: 18px;
                 margin-bottom: 12px;
                 font-weight: 700;
                 color: var(--primary-brown);
+                display: flex;
+                align-items: center;
             }
 
             .day-content h4:first-of-type {
@@ -1501,58 +1541,88 @@
             .day-content h4:before {
                 content: '';
                 display: inline-block;
-                width: 3px;
-                height: 16px;
+                width: 4px;
+                height: 18px;
                 background: var(--primary-brown);
-                margin-right: 8px;
+                margin-right: 10px;
                 border-radius: 2px;
-                vertical-align: middle;
+                flex-shrink: 0;
             }
 
             .day-content ul {
                 font-size: 13px;
                 margin-left: 0;
+                margin-bottom: 0;
             }
 
             .day-content li {
-                margin-bottom: 10px;
-                padding-left: 20px;
+                margin-bottom: 11px;
+                padding-left: 0;
                 font-size: 13px;
-                line-height: 1.7;
+                line-height: 1.8;
                 color: var(--text-dark);
+                position: relative;
+            }
+
+            .day-content li:last-child {
+                margin-bottom: 0;
             }
 
             .day-content li:before {
-                content: '▸';
-                position: absolute;
-                left: 0;
-                color: var(--primary-brown);
-                font-weight: bold;
+                display: none;
             }
 
             .day-content > div[style*="background"] {
-                margin: 14px 0 !important;
-                padding: 12px 14px !important;
-                border-radius: 8px !important;
+                margin: 16px 0 !important;
+                padding: 14px 14px !important;
+                border-radius: 10px !important;
                 font-size: 13px !important;
+                background-color: #F9F8F6 !important;
+                border-left: 4px solid var(--primary-brown) !important;
             }
 
             .day-content > div[style*="background"] > div:first-child {
-                font-size: 14px !important;
+                font-size: 15px !important;
                 font-weight: 700 !important;
-                margin-bottom: 10px !important;
+                margin-bottom: 12px !important;
+                color: var(--primary-brown) !important;
+            }
+
+            .day-content > div[style*="background"] ul {
+                margin-left: 0 !important;
+                color: var(--text-dark) !important;
+            }
+
+            .day-content > div[style*="background"] li {
+                font-size: 13px !important;
+                margin-bottom: 9px !important;
+                padding-left: 0 !important;
+                color: var(--text-dark) !important;
+                line-height: 1.7 !important;
+            }
+
+            .day-content > div[style*="background"] li:last-child {
+                margin-bottom: 0 !important;
+            }
+
+            .day-content > div[style*="background"] li:before {
+                display: none !important;
             }
 
             .flight-container {
-                margin-top: 20px;
-                border-radius: 10px;
+                margin-top: 24px;
+                border-radius: 12px;
                 overflow: hidden;
+                background: white;
+                box-shadow: 0 2px 10px rgba(139, 111, 71, 0.12);
             }
 
             .flight-header {
-                padding: 16px 14px;
-                font-size: 15px;
+                padding: 18px 14px;
+                font-size: 16px;
                 font-weight: 700;
+                background: linear-gradient(135deg, #8B6F47 0%, #A68B63 100%);
+                color: white;
             }
 
             .flight-badge {
@@ -1560,20 +1630,24 @@
                 right: 10px;
                 font-size: 10px;
                 padding: 4px 8px;
+                background: rgba(255, 255, 255, 0.3);
+                color: white;
+                border-radius: 4px;
             }
 
             .flight-content {
                 padding: 16px 14px;
+                background: white;
             }
 
             .flight-grid {
                 grid-template-columns: 1fr;
-                gap: 12px;
+                gap: 14px;
             }
 
             .flight-item {
-                padding: 10px 0;
-                border-bottom: 1px solid rgba(139, 111, 71, 0.1);
+                padding: 12px 0;
+                border-bottom: 1px solid #E8E0D5;
             }
 
             .flight-item:last-child {
@@ -1582,42 +1656,46 @@
 
             .flight-label {
                 font-size: 11px;
-                margin-bottom: 4px;
+                margin-bottom: 6px;
                 color: var(--text-mid);
-                font-weight: 600;
+                font-weight: 700;
                 text-transform: uppercase;
-                letter-spacing: 0.5px;
+                letter-spacing: 0.8px;
             }
 
             .flight-value {
                 font-size: 14px;
-                font-weight: 600;
+                font-weight: 700;
                 color: var(--primary-brown);
             }
 
             .flight-note {
-                padding: 12px 14px;
+                padding: 14px;
                 font-size: 13px;
-                border-radius: 8px;
-                margin-top: 12px;
-                background: rgba(139, 111, 71, 0.05);
+                border-radius: 10px;
+                margin-top: 14px;
+                background: #F9F8F6;
+                border-left: 4px solid var(--primary-brown);
             }
 
             .flight-note .flight-label {
                 font-size: 12px;
                 margin-bottom: 8px;
+                color: var(--primary-brown);
             }
 
             .hotel-list-item {
-                padding: 14px 16px;
+                padding: 16px 14px;
                 flex-direction: column;
-                gap: 10px;
-                border-radius: 10px;
-                background: #F5F0EB;
+                gap: 12px;
+                border-radius: 12px;
+                background: #F9F8F6;
+                border: 1px solid #E8E0D5;
+                margin-bottom: 12px;
             }
 
             .hotel-date {
-                font-size: 13px;
+                font-size: 14px;
                 font-weight: 700;
                 color: var(--primary-brown);
             }
@@ -1625,18 +1703,51 @@
             .hotel-name {
                 font-size: 13px;
                 font-weight: 600;
-                line-height: 1.6;
+                line-height: 1.7;
+                color: var(--text-dark);
             }
 
             .hotel-price {
-                font-size: 13px;
+                font-size: 14px;
                 text-align: left;
                 width: 100%;
                 border-top: 1px solid rgba(139, 111, 71, 0.2);
-                padding-top: 10px;
-                margin-top: 10px;
+                padding-top: 12px;
+                margin-top: 12px;
                 color: var(--primary-brown);
                 font-weight: 700;
+            }
+
+            .attractions-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .attraction-card {
+                padding: 14px;
+                background: white;
+                border-radius: 10px;
+                border: 1px solid #E8E0D5;
+                box-shadow: 0 2px 8px rgba(139, 111, 71, 0.08);
+            }
+
+            .attraction-title {
+                font-size: 14px;
+                font-weight: 700;
+                color: var(--primary-brown);
+                margin-bottom: 8px;
+            }
+
+            .attraction-detail {
+                font-size: 12px;
+                color: var(--text-mid);
+                margin-bottom: 6px;
+            }
+
+            .attraction-date {
+                font-size: 12px;
+                color: var(--text-dark);
             }
 
             .checklist-grid {
@@ -1646,95 +1757,147 @@
 
             .checklist-category {
                 padding: 16px 14px;
-                border-radius: 10px;
-                background: #F5F0EB;
+                border-radius: 12px;
+                background: white;
+                border: 1px solid #E8E0D5;
+                box-shadow: 0 2px 8px rgba(139, 111, 71, 0.08);
             }
 
             .checklist-title {
-                font-size: 14px;
+                font-size: 15px;
                 font-weight: 700;
                 margin-bottom: 14px;
-                padding-bottom: 10px;
+                padding-bottom: 12px;
                 color: var(--primary-brown);
-                border-bottom: 2px solid rgba(139, 111, 71, 0.2);
+                border-bottom: 2px solid var(--primary-brown);
             }
 
             .checklist-item {
-                margin-bottom: 12px;
+                margin-bottom: 13px;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
+            }
+
+            .checklist-item:last-child {
+                margin-bottom: 0;
             }
 
             .checklist-item input {
-                width: 18px;
-                height: 18px;
-                margin-right: 10px;
+                width: 20px;
+                height: 20px;
+                margin-right: 12px;
+                margin-top: 2px;
                 cursor: pointer;
                 flex-shrink: 0;
+                accent-color: var(--primary-brown);
             }
 
             .checklist-item label {
                 font-size: 13px;
                 cursor: pointer;
-                line-height: 1.6;
+                line-height: 1.7;
                 flex: 1;
+                color: var(--text-dark);
             }
 
             .budget-list-item {
-                padding: 14px 16px;
-                flex-direction: column;
+                padding: 14px;
+                flex-direction: row;
                 gap: 12px;
-                border-radius: 10px;
-                background: #F5F0EB;
+                border-radius: 8px;
+                background: white;
+                border: 1px solid #E8E0D5;
+                box-shadow: none;
+                margin-bottom: 10px;
+                align-items: flex-start;
+            }
+
+            .budget-list-item:hover {
+                box-shadow: 0 1px 3px rgba(139, 111, 71, 0.04);
             }
 
             .budget-list-label {
                 width: 100%;
                 font-size: 13px;
-                font-weight: 700;
-                color: var(--primary-brown);
+                font-weight: 600;
+                color: var(--text-dark);
+                letter-spacing: 0px;
+                flex: 1;
             }
 
             .budget-list-title {
                 font-size: 13px;
                 font-weight: 600;
-                margin-bottom: 4px;
+                margin-bottom: 3px;
+                color: var(--text-dark);
             }
 
             .budget-list-desc {
+                font-size: 11px;
+                color: var(--text-mid);
+                line-height: 1.4;
+            }
+
+            .budget-list-amount {
+                width: auto;
+                text-align: right;
+                border-top: none;
+                padding-top: 0;
+                margin-top: 0;
+                flex-shrink: 0;
+            }
+
+            .budget-list-amount-main {
+                font-size: 14px;
+                font-weight: 700;
+                color: var(--text-dark);
+            }
+
+            .budget-total {
+                padding: 18px 14px;
+                margin-bottom: 16px;
+                border-radius: 8px;
+                text-align: center;
+                background: white;
+                border: 1px solid #E8E0D5;
+                box-shadow: none;
+            }
+
+            .budget-total-amount {
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 6px;
+                color: var(--text-dark);
+                letter-spacing: 0.5px;
+            }
+
+            .budget-total-label {
                 font-size: 12px;
                 color: var(--text-mid);
             }
 
-            .budget-list-amount {
-                width: 100%;
-                text-align: left;
-                border-top: 1px solid rgba(139, 111, 71, 0.2);
-                padding-top: 12px;
-                margin-top: 12px;
+            /* 手機版本：預算三欄改堆疊 */
+            div[style*="display: grid"][style*="grid-template-columns: 1fr 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 12px !important;
             }
 
-            .budget-list-amount-main {
-                font-size: 15px;
-                font-weight: 700;
-                color: var(--primary-brown);
+            /* 手機版本：預算摘要框減淡 */
+            div[style*="background: linear-gradient(135deg, rgba(255, 107, 107, 0.08)"] {
+                background: white !important;
+                border: 1px solid #E8E0D5 !important;
             }
 
-            .budget-total {
-                padding: 28px 16px;
-                margin-bottom: 20px;
-                border-radius: 12px;
-                text-align: center;
+            div[style*="border: 2px solid #FF6B6B"] {
+                border: 1px solid #E8E0D5 !important;
+                background: white !important;
             }
 
-            .budget-total-amount {
-                font-size: 36px;
-                font-weight: 700;
-                margin-bottom: 10px;
-                color: var(--primary-brown);
+            /* 手機版本：預算項目顏色更溫和 */
+            div[style*="color: #FF6B6B"] {
+                color: var(--text-dark) !important;
             }
 
-            .budget-total-label {
                 font-size: 12px;
                 margin-bottom: 10px;
             }
@@ -3196,4 +3359,3 @@
     </script>
 </body>
 </html>
-
